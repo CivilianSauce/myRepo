@@ -1,0 +1,57 @@
+Untuk menjalankan perintah `scrcpy -f` secara otomatis ketika login di Windows, Anda bisa menggunakan Task Scheduler atau meletakkan skrip dalam folder **Startup**. Berikut adalah kedua cara tersebut:
+
+---
+
+### 1. **Menggunakan Task Scheduler**
+Task Scheduler memungkinkan Anda menjalankan aplikasi atau perintah tertentu ketika login.
+
+1. **Buka Task Scheduler**  
+   - Tekan tombol **Win + S**, ketik "Task Scheduler," lalu buka aplikasi tersebut.
+
+2. **Buat Task Baru**  
+   - Klik **Create Task** di sisi kanan.
+   - Beri nama task, misalnya `Run scrcpy`.
+
+3. **Atur Trigger**  
+   - Pergi ke tab **Triggers** dan klik **New...**.
+   - Pilih **At log on** di menu dropdown "Begin the task".
+
+4. **Atur Action**  
+   - Pergi ke tab **Actions** dan klik **New...**.
+   - Pilih **Start a program**.
+   - Di kolom **Program/script**, masukkan lokasi file `scrcpy.exe`.
+     - Contoh: `C:\path\to\scrcpy.exe`.
+   - Di kolom **Add arguments (optional)**, masukkan `-f` untuk menjalankan dalam mode fullscreen.
+
+5. **Simpan Task**  
+   - Klik **OK** untuk menyimpan task.
+   - Task akan berjalan setiap kali Anda login ke Windows.
+
+---
+
+### 2. **Menggunakan Folder Startup**
+Ini adalah cara yang lebih sederhana, tetapi kurang fleksibel dibandingkan Task Scheduler.
+
+1. **Buat File Batch**  
+   - Buka Notepad dan masukkan perintah berikut:
+     ```batch
+     @echo off
+     C:\path\to\scrcpy.exe -f
+     ```
+   - Simpan file dengan nama, misalnya, `start_scrcpy.bat`.  
+     Pastikan Anda menyimpan file dengan ekstensi `.bat`, bukan `.txt`.
+
+2. **Letakkan File di Folder Startup**  
+   - Tekan **Win + R**, ketik `shell:startup`, lalu tekan Enter. Ini akan membuka folder **Startup**.
+   - Salin file `start_scrcpy.bat` ke folder ini.
+
+3. **Selesai**  
+   - File batch akan dieksekusi setiap kali Anda login, menjalankan `scrcpy -f`.
+
+---
+
+### Mana yang Lebih Baik?
+- **Task Scheduler** lebih baik jika Anda memerlukan kontrol lebih, seperti menunda eksekusi atau menjalankan dengan hak admin.
+- **Folder Startup** adalah cara yang lebih cepat dan sederhana. 
+
+Pilih metode yang sesuai dengan kebutuhan Anda! 😊

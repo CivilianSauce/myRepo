@@ -1,4 +1,4 @@
 # myRepo
 
 This is just my github
-note: 'commands' directory is for Linux
+ (note: 'commands' directory is for Linux)

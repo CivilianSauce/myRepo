@@ -10,6 +10,12 @@ sudo apt install lxde
 #set ke tampilan GUI
 sudo systemctl set-default graphical.target
 
+#mulai ulang sistem
+sudo reboot
+
+#jika GUI tidak muncul otomatis
+startx
+
 
 #kembali ke tampilan CLI
 sudo systemctl set-default multi-user.target

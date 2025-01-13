@@ -1,5 +1,0 @@
-#set ke tampilan GUI
-sudo systemctl set-default graphical.target
-
-#set ke tampilan CLI
-sudo systemctl set-default multi-user.target

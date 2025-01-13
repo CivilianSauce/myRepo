@@ -1,0 +1,15 @@
+#instal komponen dasar GUI
+sudo apt install xorg
+
+#pilih desktop environment yang diinginkan
+sudo apt install gnome
+sudo apt install kde-plasma-desktop
+sudo apt install task-xfce-desktop
+sudo apt install lxde
+
+#set ke tampilan GUI
+sudo systemctl set-default graphical.target
+
+
+#kembali ke tampilan CLI
+sudo systemctl set-default multi-user.target

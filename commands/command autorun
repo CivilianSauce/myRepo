@@ -60,7 +60,7 @@ Jika Anda ingin perintah berjalan sebagai service atau di luar sesi login:
 
    Ganti `/path/to/script_atau_command` dengan path ke script atau perintah yang Anda ingin jalankan. Anda dapat mengetahui lokasi path yang tepat dari sebuah perintah hanya dengan nama command-nya, **jika command tersebut berada di salah satu direktori yang ada dalam variabel lingkungan `$PATH`.** Berikut adalah beberapa cara untuk melakukannya:
 
-   ### 1. **Menggunakan `which`**
+       1. **Menggunakan `which`**
 `which` akan menunjukkan lokasi file eksekusi dari command yang dimasukkan:
 ```bash
 which nama_command
@@ -73,8 +73,7 @@ Output:
 ```bash
 /usr/bin/python3
 ```
-
-   ### 2. **Menggunakan `command -v`**
+       2. **Menggunakan `command -v`**
 `command -v` adalah cara lain untuk mendapatkan path lengkap:
 ```bash
 command -v nama_command
@@ -87,8 +86,7 @@ Output:
 ```bash
 /bin/bash
 ```
-
-   ### 3. **Menggunakan `type`**
+       3. **Menggunakan `type`**
 `type` memberikan informasi lebih rinci tentang command, termasuk apakah itu alias, built-in shell, atau executable file:
 ```bash
 type nama_command
@@ -101,8 +99,7 @@ Output:
 ```bash
 ls is aliased to `ls --color=auto'
 ```
-
-   ### 4. **Menggunakan `whereis`**
+       4. **Menggunakan `whereis`**
 `whereis` akan mencantumkan lokasi binary, source code, dan man page dari sebuah command:
 ```bash
 whereis nama_command
@@ -115,8 +112,7 @@ Output:
 ```bash
 nano: /usr/bin/nano /usr/share/nano
 ```
-
-   ### 5. **Menggunakan `find` (Jika Tidak Ada di `$PATH`)**
+       5. **Menggunakan `find` (Jika Tidak Ada di `$PATH`)**
 Jika command tidak ditemukan di `$PATH`, Anda bisa mencari file-nya secara manual dengan `find`:
 ```bash
 sudo find / -name nama_command
@@ -129,8 +125,7 @@ Output:
 ```bash
 /home/nama_user/script_anda.sh
 ```
-
-   ### 6. **Menggunakan `locate` (Jika Database Ada)**
+       6. **Menggunakan `locate` (Jika Database Ada)**
 Jika database `locate` telah dibuat, Anda dapat mencarinya dengan cepat:
 ```bash
 locate nama_command

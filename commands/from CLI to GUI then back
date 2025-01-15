@@ -1,3 +1,6 @@
+#update paket-paket sistem terlebih dahulu
+sudo apt update && sudo apt upgrade
+
 #instal komponen dasar GUI
 sudo apt install xorg
 

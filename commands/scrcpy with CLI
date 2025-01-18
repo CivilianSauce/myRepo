@@ -1,4 +1,4 @@
-Tenang! Kamu tetap bisa menampilkan **scrcpy** ke layar yang lebih besar **meskipun hanya menggunakan CLI**. Tidak perlu desktop environment seperti LXDE atau GNOME, karena **X server** (yang bertanggung jawab menampilkan grafis) tetap bisa berjalan tanpa GUI penuh.
+Kamu bisa menampilkan **scrcpy** ke layar yang lebih besar **meskipun hanya menggunakan CLI**. Tidak perlu desktop environment seperti LXDE atau GNOME, karena **X server** (yang bertanggung jawab menampilkan grafis) tetap bisa berjalan tanpa GUI penuh.
 
 Berikut adalah **solusi optimal** agar **scrcpy** tampil di layar besar dengan sistem berbasis CLI minimalis.
 

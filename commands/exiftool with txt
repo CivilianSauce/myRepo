@@ -1,1 +1,4 @@
 exiftool -Comment="$(cat komentar.txt)" nama_file
+
+#Jika tidak ingin membuat backup
+exiftool -overwrite_original -Comment="$(cat komentar.txt)" nama_file

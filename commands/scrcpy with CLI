@@ -1,6 +1,16 @@
 Kamu bisa menampilkan **scrcpy** ke layar yang lebih besar **meskipun hanya menggunakan CLI**. Tidak perlu desktop environment seperti LXDE atau GNOME, karena **X server** (yang bertanggung jawab menampilkan grafis) tetap bisa berjalan tanpa GUI penuh.
-
 Berikut adalah **solusi optimal** agar **scrcpy** tampil di layar besar dengan sistem berbasis CLI minimalis.
+
+---
+
+**Pastikan `scrcpy` Sudah Terinstal dan Berfungsi**
+- Pastikan Anda telah menginstal `scrcpy` di sistem Anda dengan panduan lengkap dari Github
+  https://github.com/Genymobile/scrcpy
+- Hubungkan perangkat Android Anda melalui kabel USB, aktifkan **USB debugging** di opsi pengembang.
+- Uji apakah `scrcpy` dapat berjalan dengan perintah:
+  ```bash
+  scrcpy
+  ```
 
 ---
 
@@ -74,53 +84,6 @@ Agar scrcpy langsung berjalan setiap kali perangkat dinyalakan:
 
 ---
 
-### 🔧 **4. (Opsional) Matikan Output Teks di Terminal**
-Agar tampilan lebih bersih, kamu bisa mengurangi teks yang muncul di terminal dengan menambahkan **quiet** di file **GRUB**.
-
-```bash
-sudo nano /etc/default/grub
-```
-
-Ubah baris:
-```ini
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-```
-
-Lalu update GRUB:
-```bash
-sudo update-grub
-```
-
----
-
-## 🎯 **Hasil Akhir:**
-- **Debian** akan boot langsung ke **scrcpy** dalam mode fullscreen tanpa desktop environment.
-- **Layar besar** akan langsung menampilkan mirroring perangkat Android tanpa GUI lain.
-- Tidak ada desktop yang berjalan di background, sehingga lebih hemat daya.
-
----
-
-Apakah ini solusi yang kamu cari? 😃
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Untuk menjalankan **`scrcpy`** secara otomatis setiap kali Anda menyalakan PC agar langsung menampilkan display telepon Anda, Anda bisa mengatur agar perintah tersebut dijalankan secara otomatis saat login. Berikut adalah langkah-langkahnya:
 
@@ -128,18 +91,6 @@ Untuk menjalankan **`scrcpy`** secara otomatis setiap kali Anda menyalakan PC ag
 
 ### **Langkah-Langkah Menjalankan `scrcpy` Otomatis**
 
-#### 1. **Pastikan `scrcpy` Sudah Terinstal dan Berfungsi**
-- Pastikan Anda telah menginstal `scrcpy` di sistem Anda:
-  ```bash
-  sudo apt install scrcpy
-  ```
-- Hubungkan perangkat Android Anda melalui kabel USB, aktifkan **USB debugging** di opsi pengembang.
-- Uji apakah `scrcpy` dapat berjalan dengan perintah:
-  ```bash
-  scrcpy
-  ```
-
----
 
 #### 2. **Tulis Skrip untuk Menjalankan `scrcpy`**
 Buat skrip bash untuk menjalankan `scrcpy` otomatis.
@@ -179,17 +130,7 @@ Ada beberapa cara untuk menjalankan skrip otomatis saat login.
 
 ---
 
-### **Metode 2: Gunakan Desktop Startup Applications (GUI)**
-1. Buka aplikasi **Startup Applications** di desktop Anda (tergantung lingkungan desktop, biasanya disebut **Session and Startup** atau sejenisnya).
-2. Tambahkan entri baru:
-   - **Name**: `Start scrcpy`
-   - **Command**: `/home/your_username/start-scrcpy.sh`
-   - **Description**: Menjalankan `scrcpy` saat login
-3. Simpan dan keluar.
-
----
-
-### **Metode 3: Gunakan `systemd`**
+### **Metode 2: Gunakan `systemd`**
 1. Buat file layanan untuk menjalankan skrip:
    ```bash
    sudo nano /etc/systemd/system/start-scrcpy.service
@@ -226,5 +167,31 @@ Ada beberapa cara untuk menjalankan skrip otomatis saat login.
 - **Reboot Sistem**: Setelah reboot, pastikan `scrcpy` berjalan otomatis dan menampilkan layar telepon Anda.
 
 ---
+
+---
+
+### 🔧 **4. (Opsional) Matikan Output Teks di Terminal**
+Agar tampilan lebih bersih, kamu bisa mengurangi teks yang muncul di terminal dengan menambahkan **quiet** di file **GRUB**.
+
+```bash
+sudo nano /etc/default/grub
+```
+
+Ubah baris:
+```ini
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```
+
+Lalu update GRUB:
+```bash
+sudo update-grub
+```
+
+---
+
+## 🎯 **Hasil Akhir:**
+- **Debian** akan boot langsung ke **scrcpy** dalam mode fullscreen tanpa desktop environment.
+- **Layar besar** akan langsung menampilkan mirroring perangkat Android tanpa GUI lain.
+- Tidak ada desktop yang berjalan di background, sehingga lebih hemat daya.
 
 Jika Anda memiliki pertanyaan atau kendala saat mengikuti langkah-langkah ini, beri tahu saya! 😊

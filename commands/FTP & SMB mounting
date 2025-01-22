@@ -1,0 +1,23 @@
+---FTP---
+
+#how to mount it#
+└─$ sudo mkdir /mnt/ftp
+└─$ sudo chmod 775 /mnt/ftp
+└─$ curlftpfs ftp://username:password@ftp_server /mnt/ftp
+└─$ cd /mnt/ftp
+└─$ ls
+
+#how to unmount it#
+└─$ sudo umount /mnt/ftp
+
+---SMB---
+
+#how to mount it#
+└─$ sudo mkdir /mnt/smb
+└─$ sudo chmod 775 /mnt/smb
+└─$ sudo mount -t cifs //server_address/share_name /mnt/smb -o username=your_username,password=your_password
+└─$ cd /mnt/smb
+└─$ ls
+
+#how to unmount it#
+└─$ sudo umount /mnt/smb

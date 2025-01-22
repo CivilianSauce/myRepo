@@ -1,3 +1,2 @@
 #sound balancer#
-
 └─$ amixer -D pulse sset 'Master' 100%,62%

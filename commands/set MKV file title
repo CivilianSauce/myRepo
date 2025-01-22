@@ -1,1 +1,1 @@
-mkvpropedit "file.mkv" --edit info --set "title=Judul Baru"
+└─$ mkvpropedit "file.mkv" --edit info --set "title=Judul Baru"

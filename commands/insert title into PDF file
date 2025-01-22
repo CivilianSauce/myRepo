@@ -1,1 +1,1 @@
-exiftool -Title="insert your title here" yourPDFfile.pdf
+└─$ exiftool -Title="insert your title here" yourPDFfile.pdf

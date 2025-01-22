@@ -1,24 +1,24 @@
 #update paket-paket sistem terlebih dahulu
-sudo apt update && sudo apt upgrade
+└─$ sudo apt update && sudo apt upgrade
 
 #instal komponen dasar GUI
-sudo apt install xorg
+└─$ sudo apt install xorg
 
 #pilih desktop environment yang diinginkan
-sudo apt install gnome
-sudo apt install kde-plasma-desktop
-sudo apt install task-xfce-desktop
-sudo apt install lxde
+└─$ sudo apt install gnome
+└─$ sudo apt install kde-plasma-desktop
+└─$ sudo apt install task-xfce-desktop
+└─$ sudo apt install lxde
 
 #set ke tampilan GUI
-sudo systemctl set-default graphical.target
+└─$ sudo systemctl set-default graphical.target
 
 #mulai ulang sistem
-sudo reboot
+└─$ sudo reboot
 
 #jika GUI tidak muncul otomatis
-startx
+└─$ startx
 
 
 #kembali ke tampilan CLI
-sudo systemctl set-default multi-user.target
+└─$ sudo systemctl set-default multi-user.target

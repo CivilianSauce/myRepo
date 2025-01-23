@@ -1,7 +1,0 @@
-#Instal scrcpy sesuai yang ada di Github
-https://github.com/Genymobile/scrcpy
-
-#Tambahkan input berikut pada baris terakhir file  ~/.bashrc  untuk user atau  /root/.bashrc  untuk root dengan nano
-`scrcpy -f`
-
-#

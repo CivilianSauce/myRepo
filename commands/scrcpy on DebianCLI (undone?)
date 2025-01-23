@@ -1,0 +1,14 @@
+#Beri akses sudo ke user
+
+#Instal dan tes scrcpy sesuai yang ada di Github
+https://github.com/Genymobile/scrcpy
+
+#Tambahin input berikut di baris terakhir file  /root/.bashrc  buat root pake nano
+```
+scrcpy -f
+shutdown now
+```
+
+#Install xorg trus jalanin command ini
+└─$ sudo apt install xorg
+└─# startx

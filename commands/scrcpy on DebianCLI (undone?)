@@ -3,10 +3,10 @@
 #Instal dan tes scrcpy sesuai yang ada di Github
 https://github.com/Genymobile/scrcpy
 
-#Tambahin input berikut di baris terakhir file  /root/.bashrc  buat root pake nano
+#Tambahin input ini di baris terakhir file  /root/.bashrc  buat root pake nano
 ```
-scrcpy -f
-shutdown now
+scrcpy -f     #biar scrcpy otomatis jalan fullscreen
+shutdown now  #biar otomatis matiin setelah scrcpy dipake 
 ```
 
 #Install xorg trus jalanin command ini

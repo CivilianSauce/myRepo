@@ -12,3 +12,5 @@ shutdown now
 #Install xorg trus jalanin command ini
 └─$ sudo apt install xorg
 └─# startx
+
+#Bikin autologin root

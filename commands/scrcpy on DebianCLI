@@ -1,3 +1,5 @@
+#Update & upgrade (sekalian instal ssh (opsional))
+
 #Beri akses sudo ke user
 
 #Instal dan tes scrcpy sesuai yang ada di Github
@@ -9,8 +11,8 @@ scrcpy -f     #biar scrcpy otomatis jalan fullscreen
 shutdown now  #biar otomatis matiin setelah scrcpy dipake 
 ```
 
-#Install xorg trus jalanin command ini
+#Install xorg trus jalanin command ini (katanya bisar bisa input keyboard & mouse juga)
 └─$ sudo apt install xorg
 └─# startx
 
-#Bikin autologin root
+#Bikin autologin ke root

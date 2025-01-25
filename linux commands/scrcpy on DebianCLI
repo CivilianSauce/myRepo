@@ -11,8 +11,12 @@ scrcpy -f     #biar scrcpy otomatis jalan fullscreen
 shutdown now  #biar otomatis matiin setelah scrcpy dipake 
 ```
 
-#Install xorg trus jalanin command ini (katanya bisar bisa input keyboard & mouse juga)
+#Instal xorg trus jalanin command ini (biar bisa input keyboard & mouse juga)
 └─$ sudo apt install xorg
 └─# startx
+
+#Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
+└─$ sudo apt install alsa-utils
+└─$ aplay --version
 
 #Bikin autologin ke root

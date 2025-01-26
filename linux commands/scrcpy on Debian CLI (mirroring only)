@@ -1,0 +1,25 @@
+#Update & upgrade (sekalian instal ssh (opsional))
+
+#Beri akses sudo ke user
+
+#Instal dan tes scrcpy sesuai yang ada di Github
+https://github.com/Genymobile/scrcpy
+
+(undone) #Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
+└─$ sudo apt install alsa-utils
+└─$ aplay --version
+
+#Tambahin input ini di baris terakhir file  /root/.bashrc  buat root pake nano
+```
+echo ""
+figlet "welcome to scrcpy"    #opsional, harus `└─# apt install figlet` dulu
+echo ""
+echo ""
+echo "===== Press Ctrl+C within 10 seconds to cancel ====="
+echo ""
+sleep 10
+scrcpy -f          #biar scrcpy otomatis jalan fullscreen
+shutdown now       #biar otomatis matiin setelah scrcpy dipake 
+```
+
+#Bikin autologin ke root

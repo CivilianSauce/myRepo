@@ -5,18 +5,27 @@
 #Instal dan tes scrcpy sesuai yang ada di Github
 https://github.com/Genymobile/scrcpy
 
-#Tambahin input ini di baris terakhir file  /root/.bashrc  buat root pake nano
-```
-scrcpy -f     #biar scrcpy otomatis jalan fullscreen
-shutdown now  #biar otomatis matiin setelah scrcpy dipake 
-```
-
 #Instal xorg trus jalanin command ini (biar bisa input keyboard & mouse juga)
 └─$ sudo apt install xorg
-└─# startx
 
-#Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
+(undone) #Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
 └─$ sudo apt install alsa-utils
 └─$ aplay --version
+
+#Instal xdotool buat otomatis nyembunyiin kursor ke pojok kanan bawah (tapi harus instal GUI dulu, tai emang)
+└─$ sudo apt install           #bebas dah pilih GUI apa, kalo bisa yang paling enteng
+└─$ sudo apt install xdotool
+└─# startx
+
+(undone) #Tambahin input ini di baris terakhir file  /root/.bashrc  buat root pake nano
+```
+figlet "scrcpy"    #opsional, harus `└─# apt install figlet` dulu
+echo ""
+echo "[Press Ctrl+C within 10 seconds to cancel]"
+echo ""
+sleep 10
+scrcpy -f          #biar scrcpy otomatis jalan fullscreen
+shutdown now       #biar otomatis matiin setelah scrcpy dipake 
+```
 
 #Bikin autologin ke root

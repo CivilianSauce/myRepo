@@ -22,4 +22,4 @@ scrcpy -f          #biar scrcpy otomatis jalan fullscreen
 shutdown now       #biar otomatis matiin setelah scrcpy dipake 
 ```
 
-#Bikin autologin ke root
+#Bikin autologin ke root (opsional: sekalian setting GRUB option skip)

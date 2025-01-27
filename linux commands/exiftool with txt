@@ -2,3 +2,6 @@
 
 #Jika tidak ingin membuat backup
 └─$ exiftool -overwrite_original -Comment="$(cat komentar.txt)" nama_file
+
+#Jika ingin sekaligus menyimpan output di folder lain:
+└─$ exiftool -overwrite_original -Comment="$(cat komentar.txt)" nama_file -o /path/to/output/

@@ -1,15 +1,3 @@
----FTP---
-
-#how to mount it#
-└─$ sudo mkdir /mnt/ftp
-└─$ sudo chmod 775 /mnt/ftp
-└─$ curlftpfs ftp://username:password@ftp_server /mnt/ftp
-└─$ cd /mnt/ftp
-└─$ ls
-
-#how to unmount it#
-└─$ sudo umount /mnt/ftp
-
 ---SMB---
 
 #how to mount it#
@@ -21,3 +9,16 @@
 
 #how to unmount it#
 └─$ sudo umount /mnt/smb
+
+
+---FTP---
+
+#how to mount it#
+└─$ sudo mkdir /mnt/ftp
+└─$ sudo chmod 775 /mnt/ftp
+└─$ curlftpfs ftp://username:password@ftp_server /mnt/ftp
+└─$ cd /mnt/ftp
+└─$ ls
+
+#how to unmount it#
+└─$ sudo umount /mnt/ftp

@@ -1,11 +1,11 @@
-#Update & upgrade (sekalian instal ssh (opsional))
+#Update & upgrade (opsional: sekalian instal ssh)
 
 #Beri akses sudo ke user
 
 #Instal dan tes scrcpy sesuai yang ada di Github
 https://github.com/Genymobile/scrcpy
 
-(undone) #Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
+#Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
 └─$ sudo apt install alsa-utils
 └─$ aplay --version
 

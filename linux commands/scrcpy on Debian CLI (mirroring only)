@@ -5,7 +5,7 @@
 #Instal dan tes scrcpy sesuai yang ada di Github
 https://github.com/Genymobile/scrcpy
 
-#Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
+(undone) #Instal alsa-utils buat forward audio scrcpy hp Android 11 keatas
 └─$ sudo apt install alsa-utils
 └─$ aplay --version
 

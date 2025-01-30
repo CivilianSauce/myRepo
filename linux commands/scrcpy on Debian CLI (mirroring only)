@@ -12,14 +12,14 @@ https://github.com/Genymobile/scrcpy
 #Tambahin input ini di baris terakhir file  /root/.bashrc  buat root pake nano
 ```
 echo ""
-figlet "welcome to scrcpy"    #opsional, harus `└─# apt install figlet` dulu
+figlet "welcome to scrcpy"           #opsional, harus `└─# apt install figlet` dulu
 echo ""
+scrcpy --fullscreen --no-control     #biar scrcpy otomatis jalan fullscreen dan read-only; ga ada input
 echo ""
-echo "===== Press Ctrl+C within 10 seconds to cancel ====="
+echo "===== Press Ctrl+C within 10 seconds to cancel shutdown ====="
 echo ""
 sleep 10
-scrcpy -f          #biar scrcpy otomatis jalan fullscreen
-shutdown now       #biar otomatis matiin setelah scrcpy dipake 
+shutdown now                         #biar otomatis matiin setelah scrcpy dipake 
 ```
 
 #Bikin autologin ke root (opsional: sekalian setting GRUB option skip)

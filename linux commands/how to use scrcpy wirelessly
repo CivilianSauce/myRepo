@@ -1,0 +1,13 @@
+#Instal scrcpy sesuai yang ada di Github
+https://github.com/Genymobile/scrcpy
+
+#Pastikan HP dan PC terhubung kabel USB dengan USB debugging menyala
+
+#Ketik di PC lalu cabut kabel USB
+└─$ adb tcpip 5555
+
+#Ketik di PC dengan mengganti {ip} dengan alamat IP HP
+└─$ adb connect {ip}:5555
+
+#Nyalakan scrcpy
+└─$ scrcpy

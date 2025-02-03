@@ -1,4 +1,4 @@
-Ya, kamu bisa menggunakan `xargs` untuk menggabungkan beberapa baris menjadi satu baris dengan spasi sebagai pemisah. Berikut adalah caranya:
+Kamu bisa menggunakan `xargs` untuk menggabungkan beberapa baris menjadi satu baris dengan spasi sebagai pemisah. Berikut adalah caranya:
 
 ```bash
 xargs < file.txt

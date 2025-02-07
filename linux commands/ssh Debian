@@ -1,0 +1,11 @@
+└─# apt install ssh
+└─# nano /etc/ssh/sshd_config
+
+#Pada bagian Port, hapus tanda `#` agar port menyala 
+(opsional: ganti angkanya menjadi angka di antara 50000~60000 untuk batas aman)
+
+#Setelah itu ketik:
+└─# systemctl restart ssh
+
+#Jika ingin diakses Linux lain di jaringan yang sama, ketik:
+└─$ ssh {username_debian}@{ip_debian} -p {angka_port}

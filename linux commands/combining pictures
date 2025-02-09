@@ -1,0 +1,27 @@
+Kamu bisa menggunakan **ImageMagick**, alat serbaguna untuk manipulasi gambar di Linux. Gunakan perintah berikut untuk menggabungkan beberapa foto menjadi satu foto panjang (vertikal):
+
+```bash
+convert gambar1.jpg gambar2.jpg gambar3.jpg -append hasil.jpg
+```
+
+Jika ingin menggabungkan secara horizontal, gunakan **+append**:
+
+```bash
+convert gambar1.jpg gambar2.jpg gambar3.jpg +append hasil.jpg
+```
+
+Jika belum terinstal, kamu bisa menginstalnya terlebih dahulu:
+
+```bash
+sudo apt install imagemagick  # Debian/Ubuntu
+sudo pacman -S imagemagick    # Arch Linux
+sudo dnf install imagemagick  # Fedora
+```
+
+Kalau ingin menggabungkan banyak gambar dari satu folder tanpa menulis satu per satu:
+
+```bash
+convert *.jpg -append hasil.jpg
+```
+
+Beri tahu kalau butuh opsi lain, misalnya mengatur ukuran atau menambahkan jarak antar gambar! 🚀

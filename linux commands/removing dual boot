@@ -26,4 +26,4 @@ Boot0004* kali  HD(1,GPT,718b0465-9c28-4f6f-9b0a-bbd8688b5886,0x800,0x100000)/Fi
 └─$ sudo efibootmgr -b 0000 -B     
 
 #Keluar dan restart PC
-└─$ exit && sudo reboot                                                                                      
+└─$ sudo reboot                                                                                      

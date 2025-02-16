@@ -50,6 +50,7 @@ Gantilah username dengan nama pengguna Anda.
 Jika Anda ingin membatasi akses ke folder berbagi dengan username dan password, Anda perlu menambahkan pengguna Samba:
 
 bash
+sudo useradd username
 sudo smbpasswd -a username
 
 

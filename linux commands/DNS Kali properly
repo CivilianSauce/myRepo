@@ -1,0 +1,86 @@
+Ya, aku bisa bantu! Kalau kamu ingin membuat DNS di Kali Linux, ada beberapa cara tergantung pada kebutuhanmu:  
+
+1. **Menggunakan `/etc/hosts`** (untuk resolusi lokal, tanpa server DNS)  
+2. **Menjalankan DNS Server sendiri** (menggunakan `bind9`)  
+
+---  
+
+## **1. Menggunakan `/etc/hosts` (Solusi Mudah untuk Lokal)**  
+Jika kamu hanya ingin "memetakan" domain ke IP tanpa server DNS, cukup edit file `/etc/hosts`:
+```bash
+sudo nano /etc/hosts
+```
+Tambahkan entri seperti ini:
+```
+192.168.1.100  mycustomdns.local
+```
+Lalu, coba ping untuk memastikan:
+```bash
+ping mycustomdns.local
+```
+
+Kelebihan:  
+✅ Mudah dan cepat  
+Kekurangan:  
+❌ Hanya berlaku di komputer sendiri  
+
+---
+
+## **2. Menjalankan DNS Server di Kali Linux (Menggunakan `bind9`)**  
+Kalau ingin membuat server DNS sendiri, ikuti langkah-langkah berikut:  
+
+### **Langkah 1: Install `bind9`**
+```bash
+sudo apt update
+sudo apt install bind9 -y
+```
+
+### **Langkah 2: Konfigurasi `bind9`**
+Edit file konfigurasi:
+```bash
+sudo nano /etc/bind/named.conf.local
+```
+Tambahkan zona DNS:
+```
+zone "example.local" {
+    type master;
+    file "/etc/bind/db.example.local";
+};
+```
+Simpan file (`CTRL + X`, lalu `Y`, lalu `Enter`).
+
+### **Langkah 3: Buat File Zona**
+Buat file zona:
+```bash
+sudo nano /etc/bind/db.example.local
+```
+Isi dengan:
+```
+$TTL 604800
+@ IN SOA example.local. admin.example.local. (
+    2 604800 86400 2419200 604800 )
+@ IN NS ns.example.local.
+ns IN A 192.168.1.1
+www IN A 192.168.1.100
+```
+Simpan file.
+
+### **Langkah 4: Restart dan Uji DNS**
+Restart layanan:
+```bash
+sudo systemctl restart bind9
+```
+Uji dengan:
+```bash
+nslookup www.example.local 127.0.0.1
+```
+Atau:
+```bash
+dig @127.0.0.1 www.example.local
+```
+
+Kalau berhasil, seharusnya kamu mendapatkan respons yang menunjukkan alamat IP yang sudah kamu atur.
+
+---
+
+Kalau masih ada masalah atau butuh penjelasan lebih lanjut, kasih tahu aku ya! 😊

@@ -36,12 +36,12 @@ Di bagian bawah file tersebut, tambahkan konfigurasi berikut:
 bash
 [SharedFolder]
    path = /home/username/SharedFolder
-   available = yes
    valid users = username
-   read only = no
+   available = yes
    browsable = yes
-   public = yes
    writable = yes
+   read only = no
+   public = yes
 
 
 Gantilah username dengan nama pengguna Anda.

@@ -71,7 +71,14 @@ Untuk mengakses folder berbagi dari mesin lain, gunakan alamat IP mesin Linux di
 
 
 Jika menggunakan Windows, Anda bisa mengetikkan alamat tersebut di Explorer. Jika di Linux, Anda bisa mengaksesnya melalui aplikasi pengelola file (file manager), pilih "Network" atau gunakan perintah smb://.
-Jika ingin menghapus user, gunakan:
-└─$ sudo userdel maul   #tambahkan opsi `-r` jika ingin sekalian menghapus direktori terkait user tersebut
+
+##Jika ingin menghapus user, gunakan:
+└─$ sudo userdel nama_user   #tambahkan opsi `-r` jika ingin sekalian menghapus direktori terkait user tersebut
+
+##Jika user sedang login, kamu perlu logout user tersebut atau gunakan:
+└─$ sudo pkill -u nama_user
+
+lalu coba hapus lagi.
+Pastikan tidak menghapus user yang penting, seperti user utama atau root.
 
 Dengan cara ini, folder berbagi lokal Anda sudah siap untuk diakses!

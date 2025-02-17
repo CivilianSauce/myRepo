@@ -1,4 +1,4 @@
-Untuk menjalankan perintah `scrcpy -fn` secara otomatis ketika login di Windows, Anda bisa menggunakan Task Scheduler atau meletakkan skrip dalam folder **Startup**. Berikut adalah kedua cara tersebut:
+Untuk menjalankan perintah `scrcpy -f` secara otomatis ketika login di Windows, Anda bisa menggunakan Task Scheduler atau meletakkan skrip dalam folder **Startup**. Berikut adalah kedua cara tersebut:
 
 ---
 
@@ -36,7 +36,7 @@ Ini adalah cara yang lebih sederhana, tetapi kurang fleksibel dibandingkan Task 
    - Buka Notepad dan masukkan perintah berikut:
      ```batch
      @echo off
-     C:\path\to\scrcpy.exe -fn
+     C:\path\to\scrcpy.exe -f
      ```
    - Simpan file dengan nama, misalnya, `start_scrcpy.bat`.  
      Pastikan Anda menyimpan file dengan ekstensi `.bat`, bukan `.txt`.
@@ -46,7 +46,7 @@ Ini adalah cara yang lebih sederhana, tetapi kurang fleksibel dibandingkan Task 
    - Salin file `start_scrcpy.bat` ke folder ini.
 
 3. **Selesai**  
-   - File batch akan dieksekusi setiap kali Anda login, menjalankan `scrcpy -fn`.
+   - File batch akan dieksekusi setiap kali Anda login, menjalankan `scrcpy -f`.
 
 ---
 

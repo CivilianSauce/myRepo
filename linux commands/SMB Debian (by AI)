@@ -1,4 +1,5 @@
-Untuk membuat folder berbagi lokal di Linux, Anda bisa menggunakan Samba atau NFS, tergantung pada kebutuhan Anda. Berikut adalah cara membuat folder berbagi lokal menggunakan Samba, yang lebih umum digunakan di lingkungan campuran (Linux dan Windows):
+Untuk membuat folder berbagi lokal di Linux, Anda bisa menggunakan Samba atau NFS, tergantung pada kebutuhan Anda. Berikut adalah cara membuat folder berbagi lokal menggunakan Samba, 
+yang lebih umum digunakan di lingkungan campuran (Linux dan Windows):
 
 ### 1. Instal Samba
 Jika Samba belum terinstal di sistem Anda, install terlebih dahulu. Di terminal, jalankan perintah berikut:

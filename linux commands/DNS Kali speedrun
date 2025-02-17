@@ -1,0 +1,7 @@
+Jika kamu hanya ingin "memetakan" domain ke IP tanpa server DNS, cukup edit file /etc/hosts:
+└─$ sudo nano /etc/hosts
+
+Tambahkan entri seperti ini:
+192.168.1.100  mycustomdns.local
+
+Dan selesai! Kamu bisa ping domain tersebut

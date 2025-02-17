@@ -36,7 +36,7 @@ Di bagian bawah file tersebut, tambahkan konfigurasi berikut:
 bash
 [SharedFolder]
    path = /home/username/SharedFolder
-   valid users = username
+   valid users = resident
    available = yes
    browsable = yes
    writable = yes
@@ -50,8 +50,8 @@ Gantilah username dengan nama pengguna Anda.
 Jika Anda ingin membatasi akses ke folder berbagi dengan username dan password, Anda perlu menambahkan pengguna Samba:
 
 bash
-sudo useradd username
-sudo smbpasswd -a username
+sudo useradd resident
+sudo smbpasswd -a resident
 
 
 Setelah itu, ikuti instruksi untuk mengatur kata sandi.
@@ -73,10 +73,10 @@ Untuk mengakses folder berbagi dari mesin lain, gunakan alamat IP mesin Linux di
 Jika menggunakan Windows, Anda bisa mengetikkan alamat tersebut di Explorer. Jika di Linux, Anda bisa mengaksesnya melalui aplikasi pengelola file (file manager), pilih "Network" atau gunakan perintah smb://.
 
 ##Jika ingin menghapus user, gunakan:
-└─$ sudo userdel nama_user   #tambahkan opsi `-r` jika ingin sekalian menghapus direktori terkait user tersebut
+└─$ sudo userdel resident   #tambahkan opsi `-r` jika ingin sekalian menghapus direktori terkait user tersebut
 
 ##Jika user sedang login, kamu perlu logout user tersebut atau gunakan:
-└─$ sudo pkill -u nama_user
+└─$ sudo pkill -u resident
 
 lalu coba hapus lagi.
 Pastikan tidak menghapus user yang penting, seperti user utama atau root.

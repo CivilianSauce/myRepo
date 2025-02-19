@@ -10,12 +10,13 @@ Step 3: Allow execute permission to your home directory; add the www-data user t
 └─$ sudo adduser www-data username
 Replace username with your actual user.
 
-Step 4: Configure Apache to use your new folder. Change to the `sites-available` directory:
+Step 4.1: Configure Apache to use your new folder. Change to the `sites-available` directory:
 └─$ cd /etc/apache2/sites-available
-Create a new configuration file for your site:
+
+Step 4.2: Create a new configuration file for your site:
 └─$ sudo nano example-site.conf
 
-In the configuration file, add the following:
+Step 4.3: In the configuration file, add the following:
 ```
 <VirtualHost *:80>
 <Directory /home/username/example-site/>
@@ -30,6 +31,7 @@ Replace username with your actual username.
 
 Step 5.1: Disable the default site configuration with:
 └─$ sudo a2dissite 000-default.conf
+
 Step 5.2: Enable your new site configuration with:
 └─$ sudo a2ensite example-site.conf
 

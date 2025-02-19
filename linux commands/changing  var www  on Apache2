@@ -1,0 +1,37 @@
+We assume Apache is already installed on your system. If not, you can install it with the following command:
+└─$ sudo apt install apache2
+
+Step 1: Create your website folder where your website's files will be stored. For this example, we'll create a folder named `example-site`:
+└─$ mkdir ~/example-site
+
+Step 2: Place all the files for your website in the `example-site` folder.
+
+Step 3: Allow execute permission to your home directory; add the www-data user to your user group:
+└─$ sudo adduser www-data username
+Replace username with your actual user.
+
+Step 4: Configure Apache to use your new folder. Change to the `sites-available` directory:
+└─$ cd /etc/apache2/sites-available
+Create a new configuration file for your site:
+└─$ sudo nano example-site.conf
+
+In the configuration file, add the following:
+```
+<VirtualHost *:80>
+<Directory /home/username/example-site/>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+DocumentRoot /home/username/example-site 
+</VirtualHost>
+```
+Replace username with your actual username.
+
+Step 5.1: Disable the default site configuration with:
+└─$ sudo a2dissite 000-default.conf
+Step 5.2: Enable your new site configuration with:
+└─$ sudo a2ensite example-site.conf
+
+Step 6: Reload Apache to apply the changes:
+└─$ sudo systemctl reload apache2

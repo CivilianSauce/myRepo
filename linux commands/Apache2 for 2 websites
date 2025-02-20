@@ -1,7 +1,6 @@
-Ya, sangat mungkin! Satu IP bisa menampilkan **dua atau lebih website berbeda tanpa mengubah port**, menggunakan **Name-Based Virtual Hosts** di Apache.  
-
-### **Bagaimana Cara Kerjanya?**  
-Apache dapat membedakan website berdasarkan **domain (ServerName)** yang diketik oleh pengguna. Jadi, meskipun semua website berjalan di **port 80 (HTTP) atau 443 (HTTPS)**, Apache akan mengarahkan permintaan ke direktori yang sesuai berdasarkan nama domainnya.  
+Satu IP bisa menampilkan **dua atau lebih website berbeda tanpa mengubah port**, menggunakan **Name-Based Virtual Hosts** di Apache.
+Bagaimana Cara Kerjanya? Apache dapat membedakan website berdasarkan **domain (ServerName)** yang diketik oleh pengguna. 
+Jadi, meskipun semua website berjalan di **port 80 (HTTP) atau 443 (HTTPS)**, Apache akan mengarahkan permintaan ke direktori yang sesuai berdasarkan nama domainnya.  
 
 ---
 
@@ -74,17 +73,6 @@ sudo a2ensite website2.conf
 sudo systemctl restart apache2
 ```
 
-#### **8. (Opsional) Tambahkan Domain ke File Hosts (Jika Menguji Secara Lokal)**
-Jika belum ada DNS, tambahkan ke `/etc/hosts`:
-```bash
-sudo nano /etc/hosts
-```
-Tambahkan:
-```
-127.0.0.1 website1.com
-127.0.0.1 website2.com
-```
-
 ---
 
 ### **Hasilnya**
@@ -98,5 +86,3 @@ Tambahkan:
 Jika ingin menjalankan keduanya dengan **HTTPS**, Anda perlu:  
 1. Menggunakan **sertifikat SSL** yang mendukung **multiple domains** (misalnya **Let's Encrypt dengan mode SAN atau wildcard**).  
 2. Menggunakan **VirtualHost di port 443** dengan konfigurasi yang mirip, hanya perlu menambahkan sertifikat SSL.
-
-Mau coba dengan HTTPS juga? 🚀

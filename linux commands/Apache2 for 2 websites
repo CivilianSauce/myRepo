@@ -6,7 +6,7 @@ Apache dapat membedakan website berdasarkan **domain (ServerName)** yang diketik
 ---
 
 ### **Konfigurasi Apache untuk Menjalankan 2 Website di 1 IP (Tanpa Ubah Port)**
-Misalkan kita punya dua domain:  
+Misalkan kita punya dua domain (jika belum punya, buat DNS terlebih dahulu):  
 - `website1.com`
 - `website2.com`  
 

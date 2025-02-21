@@ -36,4 +36,4 @@ Step 5.2: Enable your new site configuration with:
 └─$ sudo a2ensite example-site.conf
 
 Step 6: Reload Apache to apply the changes:
-└─$ sudo systemctl reload apache2
+└─$ sudo systemctl restart apache2

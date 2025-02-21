@@ -1,1 +1,31 @@
+Misalkan kita punya dua domain (jika belum punya, buat DNS terlebih dahulu):  
+~ `website1.com`
+~ `website2.com`  
 
+1. Buat Direktori untuk Masing-Masing Website
+└─# mkdir /var/www/website1
+└─# mkdir /var/www/website2
+
+2. Buat Halaman Sederhana untuk Masing-Masing Website
+└─# echo "<h1>Website 1</h1>" > /var/www/website1/index.html
+└─# echo "<h1>Website 2</h1>" > /var/www/website2/index.html
+
+3. Salin file default/template untuk virtualhost Apache2
+└─# cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/001-default.conf 
+└─# cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/002-default.conf 
+
+4. Buat konfigurasi virtualhost-nya
+└─# nano /etc/apache2/sites-available/001-default.conf 
+└─# nano /etc/apache2/sites-available/002-default.conf   
+
+~ Pada bagian `ServerName`, hapus tanda `#` untuk mengaktifkannya (berlaku pada kedua file di atas)
+~ Pada bagian `www.example.com`, hapus dan ganti sesuai dengan domain yang dibuat (berlaku pada kedua file di atas, 
+  pastikan kedua domain berbeda agar tidak bentrok)
+~ Pada bagian `DocumentRoot`, ganti path direktori sesuai dengan yang dibuat di nomor 1 tadi
+
+6. Aktifkan Virtual Hosts
+└─# a2ensite 001-default.conf
+└─# a2ensite 002-default.conf
+
+7. Restart Apache
+└─# systemctl restart apache2

@@ -23,9 +23,9 @@ Misalkan kita punya dua domain (jika belum punya, buat DNS terlebih dahulu):
   pastikan kedua domain berbeda agar tidak bentrok)
 ~ Pada bagian `DocumentRoot`, ganti path direktori sesuai dengan yang dibuat di nomor 1 tadi
 
-6. Aktifkan Virtual Hosts
+5. Aktifkan Virtual Hosts
 └─# a2ensite 001-default.conf
 └─# a2ensite 002-default.conf
 
-7. Restart Apache
+6. Restart Apache
 └─# systemctl restart apache2

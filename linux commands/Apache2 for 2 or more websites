@@ -27,7 +27,7 @@ Misalkan kita punya dua domain (jika belum punya, buat DNS terlebih dahulu):
             `Listen 8080` di file ports.conf:
             └─# nano /etc/apache2/ports.conf
 
-5. Atur kepemilikan dan izin
+5. Atur kepemilikan dan izin (tidak wajib)
 └─# chown -R www-data:www-data /var/www/website1
 └─# chown -R www-data:www-data /var/www/website2
 └─# chmod -R 755 /var/www

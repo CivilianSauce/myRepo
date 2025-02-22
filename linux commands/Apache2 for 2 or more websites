@@ -22,6 +22,10 @@ Misalkan kita punya dua domain (jika belum punya, buat DNS terlebih dahulu):
 ~ Pada bagian `www.example.com`, hapus dan ganti sesuai dengan domain yang dibuat (berlaku pada kedua file di atas, 
   pastikan kedua domain berbeda agar tidak bentrok)
 ~ Pada bagian `DocumentRoot`, ganti path direktori sesuai dengan yang dibuat di nomor 1 tadi
+ (opsional) Jika ingin membedakan beberapa website berdasarkan port dan bukan domain, cukup edit di bagian 
+            `<VirtualHost *:80>` menjadi angka port yang tersedia (8080 misalnya), tapi harus menambahkan 
+            `Listen 8080` di file ports.conf:
+            └─# nano /etc/apache2/ports.conf
 
 5. Aktifkan Virtual Hosts
 └─# a2ensite 001-default.conf

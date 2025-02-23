@@ -23,8 +23,8 @@ Misalkan kita punya dua domain (jika belum punya, buat DNS terlebih dahulu):
   pastikan kedua domain berbeda agar tidak bentrok)
 ~ Pada bagian `DocumentRoot`, ganti path direktori sesuai dengan yang dibuat di nomor 1 tadi
  (opsional) Jika ingin membedakan beberapa website berdasarkan port dan bukan domain, cukup edit di bagian 
-            `<VirtualHost *:80>` menjadi angka port yang tersedia (8080 misalnya), tapi harus menambahkan 
-            `Listen 8080` di file ports.conf:
+            `<VirtualHost *:80>` menjadi angka port yang tersedia (8080 misalnya) -> `<VirtualHost *:8080>`,
+            tapi harus menambahkan `Listen 8080` di file ports.conf:
             └─# nano /etc/apache2/ports.conf
 
 5. Atur kepemilikan dan izin (tidak wajib)

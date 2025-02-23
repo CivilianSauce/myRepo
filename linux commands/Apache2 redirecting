@@ -60,4 +60,4 @@ Ini memastikan hanya permintaan ke `192.168.1.100` yang diarahkan ke `https://ww
 - **.htaccess:** Jika kamu hanya ingin mengubah konfigurasi tanpa menyentuh file utama Apache.
 - **mod_rewrite:** Jika ingin redirect yang lebih fleksibel berdasarkan kondisi tertentu.
 
-Mau implementasi ini di server lokal atau di jaringan yang lebih besar? 🚀
+*catatan: portnya juga bisa diotak-atik

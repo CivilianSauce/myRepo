@@ -1,7 +1,8 @@
 We assume Apache is already installed on your system. If not, you can install it with the following command:
 └─$ sudo apt install apache2
 
-Step 1: Create your website folder where your website's files will be stored. For this example, we'll create a folder named `example-site`:
+Step 1: Create your website folder where your website's files will be stored. 
+For this example, we'll create a folder named `example-site`:
 └─$ mkdir ~/example-site
 
 Step 2: Place all the files for your website in the `example-site` folder.

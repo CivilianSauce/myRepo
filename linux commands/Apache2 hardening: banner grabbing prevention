@@ -1,46 +1,24 @@
 Untuk menghilangkan tulisan "Apache/2.X.X.X (Debian) Server at XXX.XXX.X.XX Port XXX" yang muncul pada halaman *autoindex* Apache di Debian, Anda dapat mengikuti langkah-langkah berikut:
 
 1. **Edit file konfigurasi Apache:**
-
    Buka file konfigurasi Apache utama atau file konfigurasi virtual host yang digunakan untuk situs Anda. Biasanya file konfigurasi berada di `/etc/apache2/apache2.conf` atau di dalam direktori `/etc/apache2/sites-available/`.
-
-   Untuk mengedit file konfigurasi, gunakan editor teks seperti `nano` atau `vim`. Misalnya, untuk mengedit `apache2.conf`:
-   
-   ```bash
+   ```
    sudo nano /etc/apache2/apache2.conf
    ```
 
 2. **Matikan `ServerTokens` dan `ServerSignature`:**
-
    Untuk menghilangkan informasi server (seperti "Apache/2.X.X.X (Debian)"), pastikan bahwa direktif `ServerTokens` dan `ServerSignature` diatur dengan benar.
-
    - Pastikan bahwa `ServerTokens` diatur ke `Prod` untuk menyembunyikan informasi versi Apache dan sistem operasi.
    - Atur `ServerSignature` ke `Off` untuk mematikan tanda tangan server di halaman error atau autoindex.
-
    Tambahkan atau pastikan baris-baris berikut ada di file `apache2.conf` atau dalam file konfigurasi virtual host:
-
    ```apache
    ServerTokens Prod
    ServerSignature Off
    ```
 
-3. **Matikan `Indexes` di AutoIndex (Optional):**
-
-   Jika Anda ingin mengubah perilaku *autoindex* sehingga tidak menampilkan daftar direktori, Anda dapat menonaktifkan modul `autoindex`. Cari dan pastikan direktif berikut ada di dalam konfigurasi virtual host Anda:
-
-   ```apache
-   <Directory /path/to/your/directory>
-       Options -Indexes
-   </Directory>
-   ```
-
-   Gantilah `/path/to/your/directory` dengan path yang sesuai.
-
-4. **Restart Apache:**
-
+3. **Restart Apache:**
    Setelah melakukan perubahan, pastikan untuk me-restart Apache agar perubahan konfigurasi diterapkan:
-
-   ```bash
+   ```
    sudo systemctl restart apache2
    ```
 

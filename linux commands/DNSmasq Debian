@@ -12,9 +12,9 @@ Edit file konfigurasinya
 Tambahkan atau ubah baris berikut:  
 ```
 # Gunakan interface LAN
-interface=enp2s0
+interface=enp2s0   #tergantung pada interface yang dipakai
 
-# Domain lokal
+# Domain lokal sebagai contoh
 domain=rumahku.local
 
 # IP dari domain lokal yang akan digunakan

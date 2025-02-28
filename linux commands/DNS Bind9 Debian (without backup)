@@ -7,10 +7,6 @@ Instal Apache2 dan Bind9
 Masuk ke directory Bind9
 └─# cd /etc/bind/
 
-Ganti nama file agar tidak bentrok
-└─# mv named.conf.local named.conf.local.ori  #nama file opsional
-└─# mv named.conf.default-zones named.conf.local
-
 Buka file db.local
 └─# nano db.local
 
@@ -45,7 +41,7 @@ Ganti semua yang bertuliskan `localhost` menjadi nama domain, caranya:
 ~ save file db.127
 
 Buka file named.conf.local
-└─# nano named.conf.local
+└─# nano named.conf.default-zones
 
 ~ hapus 9 baris teratas dan baris ke19 sampai seterusnya
 ~ ganti yang bertuliskan `localhost` menjadi domain `dikali.net`
@@ -65,4 +61,4 @@ Untuk memastikan ini berhasil, ketik
 jika tidak ada tulisan NXDOMAIN atau SERVFAIL, maka sudah berhasil
 └─# ping dikali.net
 └─# ping www.dikali.net
-jika TTL maka berhasil
+jika TTL atau muncul ketika dicari di browser maka berhasil

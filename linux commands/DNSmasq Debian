@@ -29,7 +29,7 @@ server=1.1.1.1
 
 Buka file resolv.conf
 └─$ sudo nano /etc/resolv.conf
-tambahkan atau hapus semua isinya dan ubah menjadi `nameserver 192.168.1.1`  #misal, tergantung IP Debian
+hapus semua isinya dan ubah menjadi `nameserver 192.168.1.1`  #misal, tergantung IP Debian
 
 Simpan dan restart dnsmasq
 └─$ sudo systemctl restart dnsmasq

@@ -22,6 +22,7 @@ Gantilah username dengan nama pengguna Anda.
 Atur izin akses ke folder yang baru dibuat agar dapat dibaca dan ditulis oleh orang lain (misalnya, grup pengguna sambashare):
 
 bash
+sudo chmod 777 /home/username
 sudo chmod 777 /home/username/SharedFolder
 
 

@@ -1,0 +1,40 @@
+Ada beberapa cara untuk meremote Termux, tergantung pada kebutuhan dan protokol yang ingin digunakan. Berikut beberapa metode yang bisa dicoba:
+
+### **1. Menggunakan SSH (Secure Shell)**
+SSH memungkinkan kamu untuk mengakses Termux dari perangkat lain, seperti PC atau ponsel lain.
+
+#### **Langkah-langkah:**
+1. **Install OpenSSH di Termux**  
+   ```
+   pkg update && pkg upgrade
+   pkg install openssh
+   ```
+2. **Cek username dan password default (jika perlu)**  
+   - Jalankan perintah berikut untuk melihat nama pengguna:
+     ```
+     whoami
+     ```
+   - Jika ingin mengatur password baru:
+     ```
+     passwd
+     ```
+3. **Jalankan SSH Server di Termux**  
+   ```
+   sshd
+   ```
+4. **Cek alamat IP perangkat**  
+   ```
+   ifconfig
+   ```
+   atau  
+   ```
+   ip a
+   ```
+   Catat alamat IP-nya (misal: `192.168.1.100`).
+
+5. **Remote Termux dari PC atau perangkat lain**  
+   - Dari Linux/macOS/Windows (dengan PowerShell atau Git Bash):
+     ```
+     ssh username@192.168.1.100 -p 8022
+     ```
+   - Dari ponsel lain menggunakan aplikasi seperti Termius atau JuiceSSH.

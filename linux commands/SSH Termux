@@ -38,3 +38,9 @@ SSH memungkinkan kamu untuk mengakses Termux dari perangkat lain, seperti PC ata
      ssh username@192.168.1.100 -p 8022
      ```
    - Dari ponsel lain menggunakan aplikasi seperti Termius atau JuiceSSH.
+
+####Jika ingin menggunakan port 22, bisa menjalankan:
+```sh
+sshd -p 22
+```
+Namun, ini memerlukan izin root agar bisa berjalan tanpa masalah.

@@ -3,7 +3,8 @@
 ~ $ pkg install python-pip -y
 ~ $ pip install pyftpdlib
 
-2. Buat direktori dan atur kepemilikan
+2. Izinkan untuk membuat direktori dan atur kepemilikannya
+~ $ termux-setup-storage
 ~ $ mkdir ~/shared
 ~ $ cd ~/shared
 ~/shared $ chmod -R 777 .

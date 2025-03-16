@@ -17,5 +17,5 @@
 5. Akses FTP server dari komputer lain sesuai dengan IP Termux
 `ftp://{IP Termux}:2121`
 
-5. Untuk mematikan FTP server setelah digunakan, ketik:
+6. Untuk mematikan FTP server setelah digunakan, ketik:
 ~/shared $ pkill -f pyftpdlib

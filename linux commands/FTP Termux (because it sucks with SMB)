@@ -1,0 +1,21 @@
+1. Instal paket-paket yang diperlukan
+~ $ pkg install python -y
+~ $ pkg install python-pip -y
+~ $ pip install pyftpdlib
+
+2. Buat direktori dan atur kepemilikan
+~ $ mkdir ~/shared
+~ $ cd ~/shared
+~/shared $ chmod -R 777 .
+
+3. Cek IP Termux untuk koneksi ke komputer lain
+~/shared $ ifconfig
+
+4. Aktifkan FTP server (username dan password bebas)
+~/shared $ python -m pyftpdlib -p 2121 -u {isi dengan username} -P {isi dengan password} -w
+
+5. Akses FTP server dari komputer lain sesuai dengan IP Termux
+`ftp://192.168.x.x:2121`
+
+5. Untuk mematikan FTP server setelah digunakan, ketik:
+~/shared $ pkill -f pyftpdlib

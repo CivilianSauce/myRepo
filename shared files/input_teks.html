@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilkan File TXT</title>
+</head>
+<body>
+    <h2>Isi File TXT:</h2>
+    <pre id="fileContent">Memuat...</pre>
+
+    <script>
+        fetch('file.txt') // Gantilah dengan nama file yang sesuai
+            .then(response => response.text())
+            .then(text => document.getElementById('fileContent').textContent = text)
+            .catch(error => document.getElementById('fileContent').textContent = "Gagal memuat file.");
+    </script>
+</body>
+</html>

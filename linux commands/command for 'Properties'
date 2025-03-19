@@ -6,3 +6,4 @@
 ┌──(dikali㉿kali)-[~/mydirectory]
 └─$ du -sh nama_direktori      # `-s` agar lebih singkat, `-h` agar formatnya bytes 
 └─$ exiftool nama_file
+└─$ stat nama_file

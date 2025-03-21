@@ -12,8 +12,9 @@
 3. Cek IP Termux untuk koneksi ke komputer lain
 ~/shared $ ifconfig
 
-4. Aktifkan FTP server (username dan password bebas)
-~/shared $ python -m pyftpdlib -p 2121 -u {username} -P {password} -w
+4. Aktifkan server FTP (username dan password bebas)
+~/shared $ python -m pyftpdlib -p 2121 -u username -P password -w &
+(& agar shell tetap dapat digunakan)
 
 5. Akses FTP server dari komputer lain sesuai dengan IP Termux
 `ftp://{IP Termux}:2121`

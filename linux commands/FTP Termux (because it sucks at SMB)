@@ -6,15 +6,15 @@
 2. Izinkan untuk membuat direktori dan atur kepemilikannya
 ~ $ termux-setup-storage
 ~ $ mkdir ~/shared
-~ $ cd ~/shared
-~/shared $ chmod -R 777 .
+~ $ chmod -R 777 ~/shared
 
 3. Cek IP Termux untuk koneksi ke komputer lain
-~/shared $ ifconfig
+~ $ ifconfig
 
 4. Aktifkan server FTP (username dan password bebas)
+~ $ cd ~/shared 
 ~/shared $ python -m pyftpdlib -p 2121 -u username -P password -w &
-(& agar shell tetap dapat digunakan)
+(`&` agar shell tetap dapat digunakan)
 
 5. Akses FTP server dari komputer lain sesuai dengan IP Termux
 `ftp://{IP Termux}:2121`

@@ -6,3 +6,9 @@
 
 # Cek statusnya
 └─$ nmcli connection show --active  #status
+
+# Untuk memutus koneksi 
+└─$ nmcli device disconnect wlan0
+   atau
+└─$ nmcli connection down "SSID"
+

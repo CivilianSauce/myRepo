@@ -9,7 +9,7 @@
 ~ $ pip install pyftpdlib
 
 2. Atur kepemilikan direktori
-~ $ termux-setup-storage   # untuk Termux, Linux lainnya tidak perlu
+~ $ termux-setup-storage   # untuk izin baca-tulis storage di Termux, Linux lainnya tidak perlu
 ~ $ mkdir ~/shared
 ~ $ chmod -R 777 ~/shared
 

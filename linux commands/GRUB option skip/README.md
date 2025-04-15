@@ -54,15 +54,19 @@ Jika ada masalah atau kamu tidak yakin dengan pengaturan, pastikan kamu menyimpa
 sudo cp /etc/default/grub /etc/default/grub.bak
 ```
 
-Kalau ada yang perlu diperjelas, beri tahu, ya! 😊
-
-~~~~~~~~~~~~~~~~
+---
 
 Kalau yang ingin diubah adalah tampilan saat booting (GRUB wallpaper), bisa dengan edit konfigurasi GRUB
-└─$ sudo nano /etc/default/grub                                 
+```bash
+sudo nano /etc/default/grub                                 
+```
 
 Ubah/tambahkan baris:
+```bash
 GRUB_BACKGROUND=/path/to/image.png
+```
 
 Lalu update GRUB
-└─$ sudo update-grub                                            
+```bash
+sudo update-grub                                            
+```

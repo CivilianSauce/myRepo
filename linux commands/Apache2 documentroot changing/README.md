@@ -53,4 +53,3 @@ Step 6: Reload Apache to apply the changes:
 ```bash
 sudo systemctl restart apache2
 ```
-`

@@ -56,7 +56,7 @@ sudo cp /etc/default/grub /etc/default/grub.bak
 
 ---
 
-Kalau yang ingin diubah adalah tampilan saat booting (GRUB wallpaper), bisa dengan edit konfigurasi GRUB
+0. Kalau yang ingin diubah adalah tampilan saat booting (GRUB wallpaper), bisa dengan edit konfigurasi GRUB
 ```bash
 sudo nano /etc/default/grub                                 
 ```

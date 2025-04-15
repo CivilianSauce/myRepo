@@ -2,15 +2,19 @@
 Agar semua perangkat di LAN otomatis menggunakan DNS lokal, cukup gunakan **dnsmasq** sebagai server DNS. Berikut langkahnya:  
 
 ### **1️⃣ Install dnsmasq**
-└─$ sudo apt install dnsmasq
+```
+sudo apt install dnsmasq
+```
 ---
 
 ### **2️⃣ Konfigurasi dnsmasq**
 Edit file konfigurasinya
-└─$ sudo nano /etc/dnsmasq.conf
+```bash
+sudo nano /etc/dnsmasq.conf
+```
 
 Tambahkan atau ubah baris berikut:  
-```
+```bash
 # Gunakan interface LAN
 interface=enp2s0   #tergantung pada interface yang dipakai
 
@@ -28,18 +32,26 @@ server=1.1.1.1
 ```
 
 Buka file resolv.conf
-└─$ sudo nano /etc/resolv.conf
-hapus semua isinya dan ubah menjadi `nameserver 192.168.1.1`  #misal, tergantung IP Debian
+```bash
+sudo nano /etc/resolv.conf
+```
+hapus semua isinya dan ubah menjadi 'nameserver 192.168.1.1'  #misal, tergantung IP Debian
 
 Simpan dan restart dnsmasq
-└─$ sudo systemctl restart dnsmasq
+```
+sudo systemctl restart dnsmasq
+```
 ---
 
 ## **🔹 Uji Coba**
 1️⃣ **Tes akses domain lokal:**  
-   └─$ ping server.rumahku.local
+```bash
+ping server.rumahku.local
+```
    Jika berhasil, akan merespons dengan **192.168.1.1**.  #misal, tergantung IP Debian
 
 2️⃣ **Cek apakah domain lain tetap bisa diakses:**  
-   └─$ ping google.com
+```bash
+ping google.com
+```
    Jika berhasil, berarti DNS forwarding berjalan dengan baik.

@@ -136,4 +136,4 @@ Untuk mengunduh seluruh isi direktori dari sebuah website lokal (atau bahkan web
 
 ---
 
-Dengan perintah ini, seluruh isi direktori beserta subdirektorinya akan diunduh ke folder lokal Anda. Anda dapat menyesuaikan opsi berdasarkan kebutuhan spesifik Anda! 😊
+Dengan perintah ini, seluruh isi direktori beserta subdirektorinya akan diunduh ke folder lokal Anda.

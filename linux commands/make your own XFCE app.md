@@ -40,5 +40,3 @@ Jika ingin aplikasi muncul di menu:
    sudo mv ~/Desktop/NamaAplikasi.desktop /usr/share/applications/
    ```
 2. **Sekarang bisa ditemukan di menu aplikasi XFCE.** 🎉
-
-Coba cara ini dan beri tahu jika ada kendala! 😊

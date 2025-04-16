@@ -72,4 +72,4 @@ Di Kali Linux, login screen menggunakan **GDM (GNOME Display Manager)** jika And
 
 ---
 
-Setelah restart, login screen Kali Linux akan menggunakan wallpaper baru. Jika ada masalah, coba pastikan path gambar benar dan periksa konfigurasi yang diedit. 😊
+Setelah restart, login screen Kali Linux akan menggunakan wallpaper baru.

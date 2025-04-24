@@ -28,4 +28,3 @@ Setelah itu, `ida` bisa dipanggil dari mana pun tanpa masalah.
 ---
 
 Kalau kamu pengen setup ini jadi template untuk command-command lain kayak `ghidra`, `ollydbg`, atau bahkan tools custom kamu sendiri, tinggal ganti path-nya aja.
-Butuh template-nya? Aku bisa bantuin juga 😄

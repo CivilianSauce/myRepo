@@ -13,41 +13,43 @@ Berikut adalah langkah-langkah yang lebih jelas mengenai bagaimana cara mengakti
 2. *Hubungkan Ponsel ke Komputer via Kabel USB* (untuk pertama kali)
    - Gunakan kabel USB untuk menghubungkan ponsel ke komputer, agar ADB dapat mengakses perangkat untuk pertama kali.
    - Buka terminal di Linux Mint, dan ketik:
-     bash
+     ```bash
      adb devices
+     ```
      
    - Setelah itu, kamu akan melihat ID perangkat ponselmu muncul di layar jika perangkat berhasil terdeteksi. Kamu mungkin diminta untuk *mengizinkan akses USB debugging* pada perangkat Androidmu (pastikan untuk mengizinkannya).
 
 3. *Aktifkan ADB Over Wi-Fi*
    - Di terminal, jalankan perintah berikut untuk mengaktifkan ADB melalui Wi-Fi:
-     bash
+     ```bash
      adb tcpip 5555
+     ```
      
      Perintah ini akan mengaktifkan ADB di perangkat pada port *5555*.
 
 4. *Temukan IP Ponsel*
    - Pada perangkat Android, buka *Settings > About phone > Status, cari bagian **IP address*.
    - Atau, kamu bisa mengetikkan perintah ini di terminal untuk mengetahui IP ponsel:
-     bash
+     ```bash
      adb shell ip route
-     
+     ```
      Biasanya IP akan tertera setelah wlan0.
 
 5. *Sambungkan ADB ke Ponsel Melalui Wi-Fi*
    - Setelah mendapatkan alamat IP ponsel, sambungkan perangkat ke Wi-Fi dengan mengetikkan perintah berikut di terminal:
-     bash
+     ```bash
      adb connect <IP perangkat>:5555
-     
+     ```
      Gantilah *<IP perangkat>* dengan alamat IP yang kamu temukan tadi. Misalnya:
-     bash
+     ```bash
      adb connect 192.168.1.100:5555
-     
+     ```
 
 6. *Cek Koneksi ADB*
    - Setelah itu, kamu bisa memeriksa apakah koneksi berhasil dengan mengetikkan perintah:
-     bash
+     ```bash
      adb devices
-     
+     ```
    - Jika semuanya berjalan dengan baik, kamu akan melihat ID perangkat di daftar perangkat yang terhubung, meskipun tidak ada kabel yang digunakan.
 
 7. *Gunakan ADB seperti Biasanya*

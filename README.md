@@ -66,7 +66,3 @@ Untuk membuat to-do list atau checklist (interaktif di GitHub):
 ```markdown
 ![Alt Text](https://link.ke.gambar.jpg)
 ```
-
----
-
-Kalau kamu mau, aku bisa bantu buatin contoh template README.md yang sering dipakai di GitHub buat dokumentasi proyek. Mau?

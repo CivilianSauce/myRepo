@@ -1,4 +1,4 @@
-Tentu! Kalau kamu belum bisa install `pwntools` karena keterbatasan lingkungan, ada beberapa solusi tergantung sistem dan kondisimu. Aku jelaskan beberapa cara:
+Kalau kamu belum bisa install `pwntools` karena keterbatasan lingkungan, ada beberapa solusi tergantung sistem dan kondisimu. Aku jelaskan beberapa cara:
 
 ---
 

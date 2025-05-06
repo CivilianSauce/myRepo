@@ -49,7 +49,7 @@ Untuk membuat to-do list atau checklist (interaktif di GitHub):
 ```markdown
 | Nama  | Umur | Kota     |
 |-------|------|----------|
-| Ani   | 20   | Jakarta  |
+| Nani  | 20   | Jakarta  |
 | Budi  | 22   | Bandung  |
 ```
 

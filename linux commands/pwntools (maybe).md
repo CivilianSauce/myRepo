@@ -93,4 +93,12 @@ s.close()
 
 ---
 
-Kalau kamu pakai distro Linux, distro dan versi berapa? Mungkin aku bisa bantu lebih spesifik untuk setup.
+Jika berhasil, instal dengan menyalin command-command ini:
+```bash
+sudo apt install gdb pip
+pip install pwn pwntools pwndbg --break-systempackages
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+ls
+./setup.sh
+```

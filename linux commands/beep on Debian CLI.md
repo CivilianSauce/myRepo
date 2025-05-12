@@ -46,4 +46,4 @@ Jika suara beep tersebut mengganggu, kamu bisa menonaktifkannya. Berikut adalah 
      ```
    - Agar permanen, tambahkan perintah ini ke file konfigurasi seperti `~/.xprofile`.
 
-Setelah salah satu metode di atas dilakukan, suara beep tidak akan muncul lagi! 😊
+Setelah salah satu metode di atas dilakukan, suara beep tidak akan muncul lagi! 😊 (seharusnya)

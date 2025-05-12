@@ -1,1 +1,0 @@
-Sesuai nama direktorinya

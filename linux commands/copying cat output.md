@@ -42,5 +42,3 @@ Jika Anda menggunakan Wayland (seperti di GNOME modern), dan `xclip`/`xsel` tida
    ```bash
    cat file.txt | wl-copy
    ```
-
-Semoga membantu! 😊

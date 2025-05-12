@@ -102,3 +102,74 @@ ping www.dikali.net
 ```
 
 Jika TTL maka berhasil
+
+---
+
+# DNS Debian Bind9 (without backup)
+
+```
+Update dan upgrade Debian
+└─# apt update && apt upgrade
+
+Instal Apache2 dan Bind9
+└─# apt install apache2 dnsutils bind9
+
+Masuk ke directory Bind9
+└─# cd /etc/bind/
+
+Buka file db.local
+└─# nano db.local
+
+Ganti semua yang bertuliskan `localhost` menjadi nama domain, caranya:
+~ klik Win+R,
+~ ketik `localhost`,
+~ klik Enter,
+~ ketik domain `dikali.net`  #misal
+~ klik A untuk mengganti semuanya,
+~ ganti IP yang ada menjadi IP Debian
+  `127.0.0.1` -> `192.168.1.1`  #misal, tergantung IP Debian
+~ jika ingin membuat subdomain, lakukan ini pada baris terakhirnya:
+  - ketik `www`
+  - klik Tab
+  - ketik `IN`
+  - klik Tab
+  - ketik `A`
+  - klik Tab
+  - ketik IP Debian `192.168.1.1`  #misal, tergantung IP Debian
+~ save file db.local
+
+Buka file db.127
+└─# nano db.127
+
+Ganti semua yang bertuliskan `localhost` menjadi nama domain, caranya:
+~ klik Win+R,
+~ ketik `localhost`,
+~ klik Enter,
+~ ketik domain `dikali.net`
+~ klik A untuk mengganti semuanya,
+~ hapus IP pada pojok kiri bawah dan ganti dengan hanya angka oktet terakhir IP Debian
+~ save file db.127
+
+Buka file named.conf.local
+└─# nano named.conf.default-zones
+
+~ hapus 9 baris teratas dan baris ke19 sampai seterusnya
+~ ganti yang bertuliskan `localhost` menjadi domain `dikali.net`
+~ ganti yang bertuliskan `127.in-addr.arpa` menjadi 3 oktet pertama IP Debian yang dibalik 
+  (misal jika IP Debian 192.168.1.1 maka ganti menjadi `1.168.192.in-addr.arpa`)
+~ save file named.conf.local
+
+Buka file resolv.conf
+└─# nano /etc/resolv.conf
+tambahkan atau hapus semua isinya dan ubah menjadi `nameserver 192.168.1.1`  #misal, tergantung IP Debian
+
+Restart Bind9 dan Network
+└─# systemctl restart bind9 networking
+
+Untuk memastikan ini berhasil, ketik  
+└─# nslookup dikali.net
+jika tidak ada tulisan NXDOMAIN atau SERVFAIL, maka sudah berhasil
+└─# ping dikali.net
+└─# ping www.dikali.net
+jika TTL atau muncul ketika dicari di browser maka berhasil
+```

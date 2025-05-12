@@ -69,5 +69,3 @@ sudo systemctl restart getty@tty1.service
    sudo rm /etc/systemd/system/getty@tty1.service
    sudo systemctl daemon-reload
    ```
-
-Semoga berhasil! 😊

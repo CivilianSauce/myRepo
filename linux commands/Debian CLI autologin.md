@@ -62,9 +62,10 @@ sudo systemctl restart getty@tty1.service
 
 ### **Catatan Penting:**
 1. **Keamanan**:
-   - Jangan gunakan autologin untuk akun root atau sistem yang membutuhkan keamanan ekstra.
+   Jangan gunakan autologin untuk akun root atau sistem yang membutuhkan keamanan ekstra.
 2. **Nonaktifkan Autologin Jika Diperlukan**:
-   Jika ingin kembali ke pengaturan login manual, cukup hapus atau kembalikan file `/etc/systemd/system/getty@tty1.service` ke versi default:
+   Jika ingin kembali ke pengaturan login manual, cukup hapus atau kembalikan file `/etc/systemd/system/getty@tty1.service`  
+   ke versi default:
    ```bash
    sudo rm /etc/systemd/system/getty@tty1.service
    sudo systemctl daemon-reload

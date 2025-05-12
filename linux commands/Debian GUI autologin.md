@@ -63,6 +63,6 @@ Untuk mengaktifkan **autologin** pada Linux Desktop berbasis **Debian**, caranya
 
 ---
 
-Setelah mengikuti langkah-langkah di atas, sistem seharusnya langsung login secara otomatis ke desktop tanpa meminta password. Jika masih tidak berfungsi, pastikan user Anda tidak memiliki **password login yang kosong** atau **autologin tidak diblokir oleh policy tertentu**.
+Setelah mengikuti langkah-langkah di atas, sistem seharusnya langsung login secara otomatis ke desktop tanpa meminta password. Jika masih tidak berfungsi, pastikan user tidak memiliki **password login yang kosong** atau **autologin tidak diblokir oleh policy tertentu**.
 
-**Karena Anda menggunakan XFCE**, kemungkinan besar LightDM adalah display manager yang digunakan. Coba metode **LightDM** terlebih dahulu. 🚀
+**Karena menggunakan XFCE**, kemungkinan besar LightDM adalah display manager yang digunakan.

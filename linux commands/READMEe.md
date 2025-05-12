@@ -1,3 +1,5 @@
+## Kebalikan apt instal
+
 Kebalikan dari `apt install` adalah `apt remove` atau `apt purge`. 
 
 - `apt remove` akan menghapus paket yang diinstal, tetapi biasanya tetap menyisakan file konfigurasi.

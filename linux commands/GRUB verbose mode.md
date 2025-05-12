@@ -1,9 +1,7 @@
 Saat Linux sedang booting, menekan tombol *Esc* bisa menampilkan proses booting dalam bentuk *teks (verbose mode)*. Biasanya yang terlihat adalah *log output* dari systemd atau init, semacam:
 
-
-[  OK  ] Started GNOME Display Manager.
-[FAILED] Failed to start Network Manager.
-
+`[  OK  ]` Started GNOME Display Manager.  
+`[FAILED]` Failed to start Network Manager.
 
 Tapi ini tergantung juga pada distro Linux yang kamu pakai dan bagaimana konfigurasi *bootloader-nya* (biasanya GRUB). Berikut penjelasan lebih detail:
 
@@ -23,19 +21,21 @@ Edit konfigurasi GRUB:
 
 1. Buka terminal.
 2. Edit file GRUB:  
-   bash
-   sudo nano /etc/default/grub
+```bash
+sudo nano /etc/default/grub
+```
    
 3. Cari baris:
-   
-   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-   
+```bash   
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```   
    Ubah menjadi:
-   
-   GRUB_CMDLINE_LINUX_DEFAULT=""
-   
-   atau kalau kamu ingin tampil teks dan tidak ingin splash sama sekali.
+```bash   
+GRUB_CMDLINE_LINUX_DEFAULT=""
+```   
+   kalau kamu ingin tampil teks dan tidak ingin splash sama sekali.
 
 4. Simpan, lalu update grub:
-   bash
-   sudo update-grub
+```bash
+sudo update-grub
+```

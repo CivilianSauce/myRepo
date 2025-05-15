@@ -1,4 +1,4 @@
-```
+```bash
 Untuk menghubungkan perangkat Bluetooth di Linux melalui command line, kamu bisa menggunakan `bluetoothctl`. Berikut langkah-langkahnya:
 
 1. Pastikan Bluetooth Aktif

@@ -1,5 +1,3 @@
-Terima kasih sudah ngecek — kamu benar lagi. Repositori GitHub `wader/pngcheck` memang tidak ada; ternyata saya keliru soal URL-nya. `pngcheck` adalah project lama, dan repositori aslinya **bukan di GitHub secara resmi**, tapi kita bisa **unduh source-nya dari situs resmi** dan tetap build di Termux.
-
 Berikut panduan **paling akurat dan terbaru** untuk menginstall `pngcheck` di Termux:
 
 ---

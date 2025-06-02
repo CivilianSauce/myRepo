@@ -11,8 +11,8 @@ sudo apt update
 sudo apt install python3 python3-pip python3-venv -y
 
 # Buat virtual environment
-python3 -m venv pwnenv
-source pwnenv/bin/activate
+python3 -m venv pwnenv  # atau bisa dengan `python3 -m venv venv`
+source pwnenv/bin/activate  # atau `source venv/bin/activate`
 
 # Install pwntools
 pip install --upgrade pip

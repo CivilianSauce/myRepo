@@ -9,12 +9,16 @@ Kalau sistemmu tidak punya `pwntools` tapi bisa install Python packages, coba:
 ```bash
 sudo apt update
 sudo apt install python3 python3-pip python3-venv -y
+```
 
-# Buat virtual environment
-python3 -m venv pwnenv  # atau bisa dengan `python3 -m venv venv`
-source pwnenv/bin/activate  # atau `source venv/bin/activate`
+ buat virtual environment
+```bash
+python3 -m venv venv  # atau bisa dengan `python3 -m venv pwnenv`
+source venv/bin/activate  # atau `source pwnenv/bin/activate`
+```
 
-# Install pwntools
+ install pwntools
+```bash
 pip install --upgrade pip
 pip install pwntools
 ```
@@ -22,7 +26,6 @@ pip install pwntools
 > Kalau berhasil, jalankan semua script eksploitasi dalam venv ini: `source pwnenv/bin/activate`
 
 (below this are unnecessary)
----
 
 ## 🧪 2. **Coba di Docker (lebih bersih dan portable)**
 

@@ -30,9 +30,62 @@ Ketika `FancyIndexing` aktif, halaman index direktori akan menyertakan:
 
 ---
 
-### 🔧 Cara mengaktifkan atau menonaktifkan
+## 🔧 Cara mengaktifkan atau menonaktifkan (bisa dipilih salah satu)
 
-Di konfigurasi Apache (`.htaccess` atau `apache2.conf`):
+
+### 1. **Di file konfigurasi utama Apache**
+
+Biasanya:
+
+* Ubuntu/Debian: `/etc/apache2/apache2.conf`
+* CentOS/RHEL: `/etc/httpd/conf/httpd.conf`
+
+Contoh:
+
+```apache
+<Directory /var/www/html/videos>
+    Options +Indexes
+    IndexOptions +FancyIndexing
+</Directory>
+```
+
+Untuk menonaktifkan:
+
+```apache
+<Directory /var/www/html/videos>
+    Options -Indexes
+</Directory>
+```
+
+---
+
+### 2. **Di file konfigurasi virtual host**
+
+Biasanya terletak di:
+
+* `/etc/apache2/sites-available/000-default.conf` (Ubuntu)
+* Atau `conf.d/vhost.conf` tergantung distro
+
+Contoh:
+
+```apache
+<VirtualHost *:80>
+    DocumentRoot /var/www/html
+
+    <Directory /var/www/html/videos>
+        Options +Indexes
+        IndexOptions +FancyIndexing
+    </Directory>
+</VirtualHost>
+```
+
+---
+
+### 3. **Di file `.htaccess`** (jika `AllowOverride` diaktifkan)
+
+Kamu bisa langsung menulis di folder target:
+
+`.htaccess` di `/var/www/html/videos`:
 
 ```apache
 Options +Indexes
@@ -42,7 +95,29 @@ IndexOptions +FancyIndexing
 Untuk menonaktifkan:
 
 ```apache
-IndexOptions -FancyIndexing
+Options -Indexes
+```
+
+> ⚠️ File `.htaccess` hanya berfungsi jika diaktifkan dengan:
+
+```apache
+AllowOverride All
+```
+
+pada konfigurasi `Directory`.
+
+---
+
+Setelah mengubah konfigurasi, **jangan lupa restart Apache:**
+
+```bash
+sudo systemctl restart apache2
+```
+
+atau
+
+```bash
+sudo service apache2 restart
 ```
 
 ---

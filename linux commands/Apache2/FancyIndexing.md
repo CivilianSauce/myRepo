@@ -54,6 +54,7 @@ Untuk menonaktifkan:
 ```apache
 <Directory /var/www/html/videos>
     Options -Indexes
+    IndexOptions -FancyIndexing
 </Directory>
 ```
 

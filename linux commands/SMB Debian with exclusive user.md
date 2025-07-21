@@ -39,7 +39,8 @@ Di bagian bawah file tersebut, tambahkan konfigurasi berikut:
 [SharedFolder]
    path = /home/username/SharedFolder
    valid users = resident
-   available = yes  #jika ingin menonaktifkan samba tanpa menghapus konfigurasinya, ubah menjadi `no`
+   available = yes
+#jika ingin menonaktifkan samba tanpa menghapus konfigurasinya, ubah menjadi `no`
    browsable = yes
    writable = yes
    read only = no

@@ -235,7 +235,3 @@ Lalu tambahkan ke `crontab -e`:
 ```cron
 0 7 * * 1 ~/disk_report.sh
 ```
-
----
-
-Kalau kamu mau, aku bisa bantu buatkan folder auto-cleanup (hapus laporan yang lebih dari 30 hari, misalnya). Mau?

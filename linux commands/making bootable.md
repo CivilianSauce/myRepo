@@ -12,4 +12,4 @@ Contoh `dd` (hati-hati!):
 sudo dd if=RedoRescue.iso of=/dev/sdX bs=4M status=progress && sync
 ```
 
-*Ganti `/dev/sdX` dengan USB-mu (pastikan tidak salah drive!).*
+*Ganti `/dev/sdX` dengan USB-mu (ketik `lsblk` dan pastikan tidak salah drive!).*

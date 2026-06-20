@@ -22,7 +22,6 @@ Jika Anda memindahkan file dari Drive C:\ ke Flashdisk, Harddisk Eksternal, atau
 | Beda Partisi/Drive (Misal: C: ke D: atau Flashdisk) | Ya | Salin data penuh → Verifikasi → Hapus asal | Tergantung performa drive |
 
 ------------------------------
-Apakah Anda sedang mengalami masalah kecepatan saat memindahkan file, atau ingin tahu cara memulihkan file yang tidak sengaja terhapus saat proses transfer? [8, 10] 
 
 [1] [https://code.quora.com](https://translate.google.com/translate?u=https://code.quora.com/When-moving-a-computer-file-does-it-make-a-copy-in-the-new-location-and-delete-the-one-in-the-old-location&hl=id&sl=en&tl=id&client=sge)
 [2] [https://www.quora.com](https://www.quora.com/Why-is-it-necessary-to-copy-files-from-one-disk-to-another)
